@@ -1,0 +1,60 @@
+<!-- Menu Lateral si es mobile-->
+<mat-sidenav-container
+    class="example-container" (backdropClick)="close('backdrop')" >
+  <mat-sidenav #sidenav (keydown.escape)="close('escape')" disableClose>
+    <div class="row" >
+      <div class="col-12 text-right">
+        <button class="button-social-icons" mat-icon-button (click)="close('toggle button')"><mat-icon>close</mat-icon></button>
+      </div>
+    </div>
+    <mat-nav-list disableRipple="true">
+      <mat-selection-list disableRipple="true" [multiple]="false">
+        <mat-list-item  *ngFor="let menu of constants.LISTADO_CATEGORIAS_MENU" [routerLinkActive]="'active'" (click)="redireccionar(menu.ruta)">
+          <a [routerLink]="menu.ruta">{{menu.nombre}}</a>
+        </mat-list-item>
+      </mat-selection-list>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+
+    <!-- Header - Parte wave -->
+    <app-wave></app-wave>
+
+    <!-- Header - Parte logo y menú inferior -->
+    <nav class="navbar navbar-expand-md">
+      <div class="container-fluid row" style="align-items: start;">
+        <div class="col-6 text-center">
+          <img class="img-logo-cabecera" src="../assets/logoRombo.png">
+        </div>
+
+        <!-- Si es mobile se muestra boton hamburguesa -->
+        <div *ngIf="mobileQuery.matches" class="col-2 text-right">
+            <button class="button-social-icons" mat-icon-button  (click)="sidenav.open()"><mat-icon>menu</mat-icon></button>
+        </div>
+
+        <!-- Si no es mobile se muestra menú inferior  -->
+        <div *ngIf="!mobileQuery.matches" class="navbar-collapse col-6 pt-3" id="navbarNavAltMarkup" style="justify-content: right;">
+          <div class="navbar-nav" *ngFor="let menu of constants.LISTADO_CATEGORIAS_MENU" [routerLinkActive]="'active'" (click)="redireccionar(menu.ruta)">
+            <!-- <a class="nav-link active" aria-current="page" href="#">Home</a> -->
+            <a class="nav-link" [routerLink]="menu.ruta">{{menu.nombre}}</a>
+
+          </div>
+        </div>
+      </div>
+    </nav> 
+
+    <!-- Body -->
+    <div class="site-container">
+      <router-outlet></router-outlet>
+      <a href="#" class="btn-flotante" (click)="irWhatsApp()"><mat-icon class="fa fa-whatsapp"  (click)="irWhatsApp()"></mat-icon></a>
+
+    </div>
+
+    <!-- Footer -->
+    <app-footer></app-footer>
+    
+  </mat-sidenav-content>
+  
+
+</mat-sidenav-container>

@@ -1,1 +1,8 @@
-<p>modal works!</p>
+<div class="tarjeta-modal-color" style="text-align: center;">
+    <p class="titulo-bienvenido" style="font-size:x-large">{{constants.TEXTOS_MODAL_CONFIRMACION.titulo}}</p>
+    <div mat-dialog-content>{{constants.TEXTOS_MODAL_CONFIRMACION.mensaje}}</div>
+    <div mat-dialog-content>{{constants.TEXTOS_MODAL_CONFIRMACION.agradecimiento}}</div>
+    <div mat-dialog-actions style="justify-content: center;" >
+        <button [mat-dialog-close]="true"  class="btn mb-3 botonFormulario">{{constants.TEXTOS_MODAL_CONFIRMACION.cerrar}}</button>
+    </div>
+</div>

@@ -1,1 +1,63 @@
-<p>contacto works!</p>
+<div class="row ">
+    <div class="col-12 mb-3">            
+        <p class="titulo-bienvenido">{{constants.TITULO_CATEGORIA.contacto }}</p>
+    </div>
+    <div class="col-12 row">
+      <!-- Formulario contacto-->
+      <div class="col-12 col-lg-8 row">
+        <div class="col-12 mb-4">
+          <p class="texto-bienvenido" >Déjanos tu mensaje y nos podremos en contacto contigo!</p>
+        </div>
+        <div class="col-12">
+          <form class="row contact-form" (submit)="sendEmail($event)">
+            <div class="col-12 mb-4">
+                <label for="nombre" class="texto-formulario-contacto" >{{constants.FORMULARIO_CONTACTO.nombre}}</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Nombre"  name="from_name" required>
+            </div>
+            <div class="col-12 mb-4">
+              <label for="email" class="texto-formulario-contacto">{{constants.FORMULARIO_CONTACTO.email}}</label>
+              <input type="text" class="form-control" id="email" placeholder="email@example.com"  name="from_email">
+            </div>
+            <div class="col-12 mb-4">
+              <label for="telefono" class="texto-formulario-contacto">{{constants.FORMULARIO_CONTACTO.telefono}}</label>
+              <input type="text" class="form-control" id="telefono" placeholder="Teléfono" name="from_telephone">
+            </div>
+            <div class="col-12 mb-4">
+                <label for="mensaje" class="texto-formulario-contacto">{{constants.FORMULARIO_CONTACTO.mensaje}}</label>
+                <textarea class="form-control" id="mensaje" rows="3" placeholder="Escribe aqui tu mensaje" name="message"></textarea>
+              </div>
+  
+            <div class="col-12 text-center">
+              <button type="submit" class="btn mb-3 botonFormulario" >Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- Forma contacto-->
+      <div class="col-12 col-lg-4 text-center row ">
+          <div class="col-12 row contacto-alineacion">
+            <div class="col-12 col-lg-3"><mat-icon class="icono-contacto-datos"> location_on</mat-icon></div>
+            <div class="col-12 col-lg-9"> <label class="texto-bienvenido">{{constants.TEXTO_CONTACTO.ciudad}}</label></div>        
+          </div>
+          <div class="col-12 row contacto-alineacion">
+            <div class="col-12 col-lg-3"><mat-icon class="icono-contacto-datos"> alternate_email</mat-icon></div>
+            <div class="col-12 col-lg-9"> <label class="texto-bienvenido">{{constants.TEXTO_CONTACTO.email}}</label></div>  
+          </div>
+          <div class="col-12 row contacto-alineacion">
+            <div class="col-12 col-lg-3"><mat-icon class="icono-contacto-datos"> phone</mat-icon></div>
+            <div class="col-12 col-lg-9"> <label class="texto-bienvenido">{{constants.TEXTO_CONTACTO.telefono}}</label></div> 
+          </div>
+  
+        <div class="col-12 row ">
+          <div class="col-4"><mat-icon class="icono-contacto" (click)="irFacebook()" [title]="constants.TITULO_ICONOS_HEADER.facebook"> facebook</mat-icon></div>
+          <div class="col-4"><mat-icon class="icono-contacto fa fa-instagram" (click)="irInstagram()" [title]="constants.TITULO_ICONOS_HEADER.instagram"></mat-icon></div>
+          <div class="col-4"><mat-icon class="icono-contacto fa fa-whatsapp" (click)="irWhatsApp()" [title]="constants.TITULO_ICONOS_HEADER.contacto"></mat-icon></div>
+        </div>
+      </div>
+  
+  
+  
+       
+    </div>
+  </div>
+  
