@@ -24,7 +24,7 @@
     <!-- Header - Parte logo y menú inferior -->
     <nav class="navbar navbar-expand-md">
       <div class="container-fluid row" style="align-items: start;">
-        <div class="col-6 text-center">
+        <div class="col-7 text-center">
           <img class="img-logo-cabecera" src="../assets/logo.png">
         </div>
 
@@ -34,7 +34,7 @@
         </div>
 
         <!-- Si no es mobile se muestra menú inferior  -->
-        <div *ngIf="!mobileQuery.matches" class="navbar-collapse col-6 pt-3" id="navbarNavAltMarkup" style="justify-content: right;">
+        <div *ngIf="!mobileQuery.matches" class="navbar-collapse col-5 pt-3" id="navbarNavAltMarkup" style="justify-content: right;">
           <div class="navbar-nav" *ngFor="let menu of constants.LISTADO_CATEGORIAS_MENU" [routerLinkActive]="'active'" (click)="redireccionar(menu.ruta)">
             <!-- <a class="nav-link active" aria-current="page" href="#">Home</a> -->
             <a class="nav-link" [routerLink]="menu.ruta">{{menu.nombre}}</a>

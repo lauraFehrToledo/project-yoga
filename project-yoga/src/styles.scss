@@ -121,7 +121,7 @@ button .fa {
 .img-logo-cabecera {
   height: auto;
   width: auto;
-  max-width: 23%;
+  max-width: 20%;
 }
 
 /** NAV LINK*/
@@ -213,10 +213,10 @@ button .fa {
 
 .imagen-home-servicios {
   max-width: -webkit-fill-available;
-  width: 50%;
+  width: 45%;
 
   @media only screen and (max-width:575px) {
-    width: 33%;
+    width: 30%;
   }
 }
 
