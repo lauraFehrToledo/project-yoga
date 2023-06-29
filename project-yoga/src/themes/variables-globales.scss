@@ -21,7 +21,11 @@ $body-color-verde: #25d366;
 // RGB
 $body-color_aqua_rgb: rgba(143, 207, 193, 0.5);
 $body-color_azul_rgb: rgba(44, 119, 132, 0.5);
-$body-color_camel_rgb: rgba(234, 153, 58, 0.5); //#ea993a80
+$body-color_camel_rgb: rgb(237 162 72 / 50%); //#ea993a80
+
+// background-color: rgb(237 162 72 / 50%);
+//     padding: 25px 0 25px 0;
+// }
 
 
 $border-radius: 20px;

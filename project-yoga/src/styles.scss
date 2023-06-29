@@ -211,9 +211,10 @@ button .fa {
   font-size: min(max(18px, 3.5vw), 25px);
   line-height: initial;
 }
-.texto-bienvenido-frase {
+.texto-negrita-cursiva {
   font-weight: 700;
   text-align-last: end;
+  font-style: italic;
 }
 
 .imagen-home-servicios {
