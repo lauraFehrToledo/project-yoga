@@ -53,13 +53,16 @@ export class Constants {
 
     public readonly BOTON_FLOTANTE_TEXTO = '¿En qué puedo ayudarte?';
 
-    public readonly TEXTO_INICIO = 'Aqui encontrarás un espacio de bienestar y cuidado para tu salud. Te ofrecemos Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Este es un texto de prueba .. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.';
+    public readonly TEXTO_INICIO = 'Les damos la bienvenida a Movimientos del Río, un espacio de conexión y cuidado para tu salud donde podrás disfrutar de diferentes clases y sesiones para cada momento y persona en particular.'
+    public readonly TEXTO_INICIO_DOS = 'Ofrecemos clases de Yoga, Expresión Corporal- Danza, consciencia corporal, movimiento sensorial, Yogaterapia y eutonía, sesiones de Masajes- Reiki.';
+    public readonly TEXTO_INICIO_TRES = 'Está dirigido a mujeres, embarazadas, adultas mayores y público en general.';
+    public readonly TEXTO_INICIO_FRASE = '<br/>"Cuando el movimiento se vuelve natural el esfuerzo cesa" B.K.S Iyengar';
     public readonly TEXTO_SERVICIO = ' Te ofrecemos Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua <br/><br/> Aqui encontrarás un espacio de bienestar y cuidado para tu salud. Te ofrecemos Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua <br/><br/>  Este es un texto de prueba .. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br/> <br/> Nos especializamos en: <br/>• MasajeThai Yoga (Masaje Tradicional Tailandés ' +
     '<br/>• Lomi Lomi (Hawaiano)<br/> • Masaje Facial Japonés <br/>• Reflexología Podal Tailandesa<br/>• Terapia Craneo-Sacral<br/>• Reiki';
 
     public readonly TITULO_FORMULARIO_CONTACTO = 'Formulario de contacto';
 
-    public readonly TITULO_INICIO = 'Bienvenid@ a Movimientos del Río';
+    public readonly TITULO_INICIO = 'Movimientos del Río';
 
     public readonly TEXTO_YOGA_UNO = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Este es un texto de prueba .. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.';
     public readonly TEXTO_YOGA_HORARIO = 'Si necesitas contactarte con nosotros por clases privadas, grupales, online y otros';

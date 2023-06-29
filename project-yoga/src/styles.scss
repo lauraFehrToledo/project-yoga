@@ -195,12 +195,13 @@ button .fa {
 }
 
 .imagen-home-bienvenido {
-  // max-width: 380px;
   @media only screen and (max-width:991.9px) {
     max-width: 300px;
   }
   @media only screen and (min-width:992px) {
     max-width: 380px;
+    margin-top: -30px;
+
   }
 }
 
@@ -209,6 +210,10 @@ button .fa {
   color: $body-color-gris;
   font-size: min(max(18px, 3.5vw), 25px);
   line-height: initial;
+}
+.texto-bienvenido-frase {
+  font-weight: 700;
+  text-align-last: end;
 }
 
 .imagen-home-servicios {
