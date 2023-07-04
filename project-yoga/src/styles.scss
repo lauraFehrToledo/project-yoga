@@ -1,33 +1,21 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
 // Plus imports for other components in your app.
-
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
 @include mat.core();
-
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $project-yoga-primary: mat.define-palette(mat.$indigo-palette);
 $project-yoga-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
-
 // The warn palette is optional (defaults to red).
 $project-yoga-warn: mat.define-palette(mat.$red-palette);
-
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$project-yoga-theme: mat.define-light-theme((
-  color: (
-    primary: $project-yoga-primary,
-    accent: $project-yoga-accent,
-    warn: $project-yoga-warn,
-  )
-));
-
+$project-yoga-theme: mat.define-light-theme(( color: ( primary: $project-yoga-primary, accent: $project-yoga-accent, warn: $project-yoga-warn, )));
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
@@ -35,284 +23,293 @@ $project-yoga-theme: mat.define-light-theme((
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: 'Neucha','CenturyGothic','AppleGothic',sans-serif !important;}
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Neucha', 'CenturyGothic', 'AppleGothic', sans-serif !important;
+}
+
 
 /* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';
 
+@import 'bootstrap/scss/bootstrap';
 @import './themes/variables-globales.scss';
 
 /** Menu Lateral ***/
+
 .mat-drawer-inner-container {
-  overflow: hidden !important;
+    overflow: hidden !important;
 }
-
-
 
 mat-sidenav {
-  background-color: $body-color-aqua !important;
-  min-width: 230px;
-  position: fixed !important;
-
-  mat-nav-list {
-
-      mat-list-item {
-        border-top: 1px solid #FFFFFF;
-        a {
-          color: #FFFFFF !important;
-          font-size: min(max(15px, 3.5vw), 18px) !important;
-        }    
-      }
-
-      mat-list-item:last-child {
-        border-bottom: 1px solid #FFFFFF;
-      }
-
-   
-      .mat-list-base .mat-list-item .mat-list-item-content, .mat-list-base .mat-list-option .mat-list-item-content {
-        justify-content: center;
-      }
-
-      .active{
-        background: $body-color-azul;
-      }
-      
-      mat-list-item:hover {
-        background: $body-color-camel !important;
-      }
-
-  }  
-
-
-  p{
-    color: $body-color-aqua !important;
-    font-size: min(max(15px, 3.5vw), 18px) !important;
-  }
-
+    background-color: $body-color-aqua !important;
+    min-width: 230px;
+    position: fixed !important;
+    mat-nav-list {
+        mat-list-item {
+            border-top: 1px solid #FFFFFF;
+            a {
+                color: #FFFFFF !important;
+                font-size: min(max(15px, 3.5vw), 18px) !important;
+            }
+        }
+        mat-list-item:last-child {
+            border-bottom: 1px solid #FFFFFF;
+        }
+        .mat-list-base .mat-list-item .mat-list-item-content,
+        .mat-list-base .mat-list-option .mat-list-item-content {
+            justify-content: center;
+        }
+        .active {
+            background: $body-color-azul;
+        }
+        mat-list-item:hover {
+            background: $body-color-camel !important;
+        }
+    }
+    p {
+        color: $body-color-aqua !important;
+        font-size: min(max(15px, 3.5vw), 18px) !important;
+    }
 }
 
-
 mat-icon {
-  color: $body-color-camel;
-  font-size: 30px !important;
-  height: 55px !important;
-  width: 55px !important;
+    color: $body-color-camel;
+    font-size: 30px !important;
+    height: 55px !important;
+    width: 55px !important;
 }
 
 .vertical-center {
-  align-self: center;
+    align-self: center;
 }
 
 .button-social-icons {
-  background-color: transparent;
+    background-color: transparent;
 }
 
 button .fa {
-  font-weight: bold;
-  font-size: 1.6em;
+    font-weight: bold;
+    font-size: 1.6em;
 }
 
 .text-right {
-  text-align: right;
+    text-align: right;
 }
+
 
 /***** Cabecera *****/
+
 .img-logo-cabecera {
-  height: auto;
-  width: auto;
-  max-width: 20%;
+    height: auto;
+    width: auto;
+    max-width: 20%;
 }
+
 
 /** NAV LINK*/
+
 .nav-link {
-  color: $body-color-ambar;
-  font-size: min(max(18px, 2vw), 22px)
+    color: $body-color-ambar;
+    font-size: min(max(18px, 2vw), 22px)
 }
 
-.nav-link:hover{
-  color: $body-color-ambar;
-  font-size: min(max(18px, 3.5vw), 24px)
+.nav-link:hover {
+    color: $body-color-ambar;
+    font-size: min(max(18px, 3.5vw), 24px)
 }
 
 .nav-link:focus {
-  color: $body-color-camel;
-  font-size: min(max(18px, 3.5vw), 25px)
+    color: $body-color-camel;
+    font-size: min(max(18px, 3.5vw), 25px)
 }
 
+
 /******Body*************/
+
 .mat-drawer-content {
-  position: sticky !important;
+    position: sticky !important;
 }
+
 .site-container {
-  max-width: 1140px;
-  margin: 0px auto;
-  padding: 0 22px;
-  position: relative;
-  margin-top: 2em;
+    max-width: 1140px;
+    margin: 0px auto;
+    padding: 0 22px;
+    position: relative;
+    margin-top: 2em;
 }
+
 
 /**********************************************************
 **************** BOTON FLOTANTE ***************************
 **********************************************************/
 
 .btn-flotante {
-  background-color: $body-color-verde;
-  position: fixed;
-  bottom: 55px;
-  right: 55px;
-  transition: all 300ms ease 0ms;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  z-index: 99; 
-  height: 65px;
-  width: 65px;
-  text-decoration: none;
-  border-radius: 50%;
-
-  mat-icon {
-    color: $body-color-blanco;
-    font-size: 50px !important;
-    padding: 5px 10px 0px 10px;
-    height: 55px;
-    width: 55px;
-  }
+    background-color: $body-color-verde;
+    position: fixed;
+    bottom: 55px;
+    right: 55px;
+    transition: all 300ms ease 0ms;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+    height: 65px;
+    width: 65px;
+    text-decoration: none;
+    border-radius: 50%;
+    mat-icon {
+        color: $body-color-blanco;
+        font-size: 50px !important;
+        padding: 5px 10px 0px 10px;
+        height: 55px;
+        width: 55px;
+    }
 }
 
 .btn-flotante:hover {
-  background-color: $body-color-azul; /* Color de fondo al pasar el cursor o pulsar */
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  transform: translateY(-7px);
-  text-decoration: none;
-
+    background-color: $body-color-azul;
+    /* Color de fondo al pasar el cursor o pulsar */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-7px);
+    text-decoration: none;
 }
+
 
 /**********************************************************
 ************** COMPONENTE - INICIO ************************
 **********************************************************/
+
 .titulo-bienvenido {
-  color: $body-color-terra;
-  font-size: min(max(25px, 3.5vw), 40px)
+    color: $body-color-terra;
+    font-size: min(max(25px, 3.5vw), 40px)
 }
 
 .imagen-home-bienvenido {
-  @media only screen and (max-width:991.9px) {
-    max-width: 300px;
-  }
-  @media only screen and (min-width:992px) {
-    max-width: 380px;
-    margin-top: -30px;
-
-  }
+    @media only screen and (max-width: 991.9px) {
+        max-width: 300px;
+    }
+    @media only screen and (min-width:992px) {
+        max-width: 380px;
+        margin-top: -30px;
+    }
 }
 
 .texto-bienvenido {
-  text-align: justify;
-  color: $body-color-gris;
-  font-size: min(max(18px, 3.5vw), 25px);
-  line-height: initial;
+    text-align: justify;
+    color: $body-color-gris;
+    font-size: min(max(18px, 3.5vw), 25px);
+    line-height: initial;
 }
+
 .texto-negrita-cursiva {
-  font-weight: 700;
-  text-align-last: end;
-  font-style: italic;
+    font-weight: 700;
+    text-align-last: end;
+    font-style: italic;
 }
 
 .imagen-home-servicios {
-  max-width: -webkit-fill-available;
-  width: 45%;
-
-  @media only screen and (max-width:575px) {
-    width: 30%;
-  }
+    max-width: -webkit-fill-available;
+    // width: 45%;
+    max-height: 8rem;
+    @media only screen and (max-width: 575px) {
+        width: 30%;
+    }
 }
 
 .nombre-servicios-home {
-  color: $body-color-azul;
-  font-size: min(max(30px, 3.5vw), 30px)
+    color: $body-color-azul;
+    font-size: min(max(30px, 3.5vw), 30px)
 }
 
 .texto-servicios-home {
-  color: $body-color-camel;
-  font-size: min(max(16px, 3.5vw), 24px)
+    color: $body-color-camel;
+    font-size: min(max(16px, 3.5vw), 24px)
 }
+
 
 /**********************************************************
 ************** COMPONENTE - CONTACTO ************************
 **********************************************************/
+
 .icono-contacto {
-  color: $body-color-azul !important;
-  font-size: 4em !important;
+    color: $body-color-azul !important;
+    font-size: 4em !important;
 }
 
 .icono-contacto:hover {
-  color: $body-color-aqua !important;
+    color: $body-color-aqua !important;
 }
 
 .form-control:focus {
-  border-color: $body-color-azul !important;
-  box-shadow: 0 0 5px $body-color-azul !important;
+    border-color: $body-color-azul !important;
+    box-shadow: 0 0 5px $body-color-azul !important;
 }
 
 .icono-contacto-datos {
-  color: $body-color-camel;
-  font-size: 4em !important;
+    color: $body-color-camel;
+    font-size: 4em !important;
 }
 
 .contacto-alineacion {
-  align-items: center;
+    align-items: center;
 }
 
 .texto-formulario-contacto {
-  color: $body-color-gris;
-  font-size: min(max(14px, 3.5vw), 18px);
+    color: $body-color-gris;
+    font-size: min(max(14px, 3.5vw), 18px);
 }
 
 .botonFormulario {
-  background-color: $body-color-camel !important;
-  color: $body-color-blanco !important;
-  border-radius: $border-radius !important;
+    background-color: $body-color-camel !important;
+    color: $body-color-blanco !important;
+    border-radius: $border-radius !important;
 }
 
 .botonFormulario:hover {
-  background-color: $body-color-terra !important;
+    background-color: $body-color-terra !important;
 }
 
 
 /**********************************************************
 ************** COMPONENTE - YOGA ************************
 **********************************************************/
+
 .img-yoga-semanal {
-  max-width: -webkit-fill-available;
-  width: 100%;
+    max-width: -webkit-fill-available;
+    width: 100%;
 }
 
 .titulo_yoga_servicio {
-  color: $body-color-azul;
-  font-size: min(max(25px, 3.5vw), 40px)
+    color: $body-color-azul;
+    font-size: min(max(25px, 3.5vw), 40px)
 }
 
 .btn-contacto {
-  color: $body-color-ambar !important;
-  background-color: $body-color-aqua !important;
-  border-radius: 0 15px 15px 15px !important;
+    color: $body-color-ambar !important;
+    background-color: $body-color-aqua !important;
+    border-radius: 0 15px 15px 15px !important;
 }
 
 .color-tarjeta-servicio-yoga-1 {
-  background-color: $body-color_camel_rgb;
-  padding: 25px 0 25px 0;
+    background-color: $body-color_camel_rgb;
+    padding: 25px 0 25px 0;
 }
 
 .color-tarjeta-servicio-yoga-2 {
-  background-color: $body-color_aqua_rgb;
-  padding: 25px 0 25px 0;
+    background-color: $body-color_aqua_rgb;
+    padding: 25px 0 25px 0;
 }
+
 
 /**********************************************************
 ************** COMPONENTE - MODAL ************************
 **********************************************************/
-.tarjeta-modal-color {
-  background: $body-color-blanco;
-  border-radius: 5px;
-  padding: 3rem;
-}
 
+.tarjeta-modal-color {
+    background: $body-color-blanco;
+    border-radius: 5px;
+    padding: 3rem;
+}

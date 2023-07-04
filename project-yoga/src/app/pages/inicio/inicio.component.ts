@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Constants } from 'src/app/constants';
 
 @Component({
@@ -8,9 +9,14 @@ import { Constants } from 'src/app/constants';
 })
 export class InicioComponent implements OnInit {
 
-  constructor(public constants: Constants) { }
+  constructor(public constants: Constants,
+    private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  public redireccionar(ruta: string) {
+    this.router.navigate([ruta]);
   }
 
 }

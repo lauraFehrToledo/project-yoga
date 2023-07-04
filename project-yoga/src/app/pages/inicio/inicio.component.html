@@ -1,6 +1,6 @@
 <div class="row ">
     <!-- Presentacion página -->
-    <div class="col-12 mb-3">            
+    <div class="col-12 mb-3">
         <p class="titulo-bienvenido">{{constants.TITULO_INICIO }}</p>
     </div>
     <div class="col-12 col-sm-12 col-md-7">
@@ -15,38 +15,40 @@
 
     <!-- Servicios-->
     <div class="col-12 mt-5 ">
-            <div class="row">
-                <div class="col-sm-4 col-12">   
-                    <div class="col-12 text-center">
-                        <img class="imagen-home-servicios " src="../../../assets/lotus.png" alt="Yoga">
-                    </div>     
-                    <div class="col-12 text-center">
-                        <p class="nombre-servicios-home"> {{constants.BTN_SERVICIOS.yoga}}</p>
-                    </div> 
-                    <div class="col-12 text-center">
-                        <p class="texto-servicios-home "> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-                    </div>                 
+        <div class="row">
+            <div class="col-sm-4 col-12" style="cursor:pointer;" (click)="redireccionar('/yoga')">
+                <div class="col-12 text-center">
+                    <img class="imagen-home-servicios " src="../../../assets/yoga-yoga.png" alt="Yoga">
                 </div>
-                <div class="col-sm-4 col-12">
-                    <div class="col-12 text-center">
-                        <img class="imagen-home-servicios " src="../../../assets/lotus.png" alt="Yoga">
-                    </div>     
-                    <div class="col-12 text-center">
-                        <p class="nombre-servicios-home"> {{constants.BTN_SERVICIOS.masajes}}</p>
-                    </div> 
-                    <div class="col-12 text-center">
-                        <p class="texto-servicios-home"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-                    </div>                                 </div>
-                <div class="col-sm-4 col-12">
-                    <div class="col-12 text-center">
-                        <img class="imagen-home-servicios " src="../../../assets/lotus.png" alt="Yoga">
-                    </div>     
-                    <div class="col-12 text-center">
-                        <p class="nombre-servicios-home"> {{constants.BTN_SERVICIOS.danza}}</p>
-                    </div> 
-                    <div class="col-12 text-center">
-                        <p class="texto-servicios-home"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-                    </div>                                 </div>
+                <div class="col-12 text-center mt-1">
+                    <p class="nombre-servicios-home"> {{constants.BTN_SERVICIOS.yoga}}</p>
+                </div>
+                <div class="col-12 text-center">
+                    <p class="texto-servicios-home "> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                </div>
             </div>
+            <div class="col-sm-4 col-12" style="cursor:pointer;" (click)="redireccionar('/masajes')">
+                <div class="col-12 text-center">
+                    <img class="imagen-home-servicios " src="../../../assets/yoga-masajes.png" alt="Yoga">
+                </div>
+                <div class="col-12 text-center mt-1">
+                    <p class="nombre-servicios-home"> {{constants.BTN_SERVICIOS.masajes}}</p>
+                </div>
+                <div class="col-12 text-center">
+                    <p class="texto-servicios-home"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                </div>
+            </div>
+            <div class="col-sm-4 col-12" style="cursor:pointer;" (click)="redireccionar('/danza')">
+                <div class="col-12 text-center">
+                    <img class="imagen-home-servicios " src="../../../assets/yoga-danza.png" alt="Yoga">
+                </div>
+                <div class="col-12 text-center mt-1">
+                    <p class="nombre-servicios-home"> {{constants.BTN_SERVICIOS.danza}}</p>
+                </div>
+                <div class="col-12 text-center">
+                    <p class="texto-servicios-home"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
